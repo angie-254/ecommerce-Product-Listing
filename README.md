@@ -14,6 +14,8 @@
 - Add-to-cart button(local state management)
 
 ## Screenshots
+![alt text](image-2.png)
+![alt text](image-1.png)
 ![alt text](image.png)
 ## Tech Stack
 
