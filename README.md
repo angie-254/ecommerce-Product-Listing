@@ -4,7 +4,7 @@
 
 ## Live Demo
 
-**Live Application**: [https://testaiapp-frontend.vercel.app](https://testaiapp-frontend.vercel.app)
+**Live Application**: [https://ecommerce-product-listing-mu.vercel.app/](https://ecommerce-product-listing-mu.vercel.app/)
 
 ## Features
 
@@ -13,6 +13,8 @@
 - Pagination/Infinite Scroll:  
 - Add-to-cart button(local state management)
 
+## Screenshots
+![alt text](image.png)
 ## Tech Stack
 
 - Next.js 13+ (App Router)
