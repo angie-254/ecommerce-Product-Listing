@@ -34,7 +34,7 @@
 1. Clone the repository:
    ```bash
    git clone <your-repo-url>
-   cd campaign-tracker/frontend
+   cd ecommerce-product-listing
    ```
 
 2. Install dependencies:
