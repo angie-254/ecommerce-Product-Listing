@@ -8,7 +8,14 @@ export interface CartItem {
   }
 
 export interface AddToCartProps {
-    product: any;
-    onAddToCart: (product: any) => void;
+    product: Product;
+    onAddToCart: (product: Product) => void;
   }
   
+  interface Product {
+    id: number;
+    name: string;
+    price: string;
+    rating: string;
+    image: string;
+  }

@@ -6,7 +6,7 @@ import { PRODUCTS } from '../lib/utils';
 import AddToCart from './add-to-cart';
 
 export default function ProductList() {
-  const [products, setProducts] = useState(PRODUCTS);
+  const [products] = useState(PRODUCTS);
   const [searchQuery, setSearchQuery] = useState('');
   const [page, setPage] = useState(1);
   const [cart, setCart] = useState<CartItem[]>([]);
@@ -17,19 +17,16 @@ export default function ProductList() {
     product.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  // Get current page products
   const currentProducts = filteredProducts.slice(
     0,
     page * PRODUCTS_PER_PAGE
   );
 
-  // This functionality will handle search
   const handleSearch = (e : React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(e.target.value);
     setPage(1);
   };
 
-  // Handle infinite scroll
   const handleScroll = () => {
     if (
       window.innerHeight + document.documentElement.scrollTop
@@ -46,9 +43,10 @@ export default function ProductList() {
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [currentProducts.length, filteredProducts.length]);
+  }, [handleScroll]);
+  
+  // [currentProducts.length, filteredProducts.length]);
 
-  // Add to cart functionality
   const addToCart = (product: {id: number; name: string; price: string; rating: string; image: string}) => {
     setCart(prev => {
       const existingItem = prev.find(item => item.id === product.id);
@@ -65,7 +63,6 @@ export default function ProductList() {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      {/* Search Bar */}
       <div className="mb-8">
         <input
           type="text"
@@ -76,7 +73,6 @@ export default function ProductList() {
         />
       </div>
 
-      {/* Cart Preview */}
       <div className="mb-8 p-4 bg-gray-100 rounded-lg">
         <h2 className="text-xl font-bold mb-2">Cart ({cart.reduce((acc, item) => acc + item.quantity, 0)} items)</h2>
         <p className="text-gray-600">
