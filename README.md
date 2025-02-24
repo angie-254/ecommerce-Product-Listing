@@ -12,7 +12,6 @@
 - Search functionality: User should be able to search through the  product list
 - Pagination/Infinite Scroll:  
 - Add-to-cart button(local state management)
-- Real-time Status Updates: Instant feedback on submission status
 
 ## Tech Stack
 
