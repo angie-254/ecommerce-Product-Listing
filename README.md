@@ -4,7 +4,7 @@
 
 ## Live Demo
 
-**Live Application**: [https://ecommerce-product-listing-mu.vercel.app/](https://ecommerce-product-listing-mu.vercel.app/)
+**Live Application** : [https://ecommerce-product-listing-mu.vercel.app/](https://ecommerce-product-listing-mu.vercel.app/)
 
 ## Features
 
